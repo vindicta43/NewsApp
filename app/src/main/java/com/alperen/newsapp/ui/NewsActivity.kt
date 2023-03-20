@@ -1,6 +1,7 @@
 package com.alperen.newsapp.ui
 
 import android.os.Bundle
+import android.telecom.TelecomManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
