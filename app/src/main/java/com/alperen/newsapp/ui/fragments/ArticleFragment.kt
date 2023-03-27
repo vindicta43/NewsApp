@@ -11,6 +11,7 @@ import com.alperen.newsapp.R
 import com.alperen.newsapp.databinding.FragmentArticleBinding
 import com.alperen.newsapp.ui.NewsActivity
 import com.alperen.newsapp.ui.NewsViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class ArticleFragment : Fragment() {
 
@@ -34,6 +35,11 @@ class ArticleFragment : Fragment() {
         binding.webView.apply {
             webViewClient = WebViewClient()
             loadUrl(article.url!!)
+        }
+
+        binding.fab.setOnClickListener {
+            viewModel.saveArticle(article)
+            Snackbar.make(view, "Article saved successfully", Snackbar.LENGTH_SHORT).show()
         }
     }
 }
